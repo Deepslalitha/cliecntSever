@@ -13,7 +13,7 @@ public class Client {
         final PrintWriter out;     //  write data into socket
         final Scanner sc = new Scanner(System.in); // read from keyboard
         try {
-            clientSocket = new Socket("127.0.0.1",5000);
+            clientSocket = new Socket("192.168.1.34",5000);
             out = new PrintWriter(clientSocket.getOutputStream());
             in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             Thread sender = new Thread(new Runnable() {
